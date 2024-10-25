@@ -3,60 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Course Management System</title>
+    <title>Student Login</title>
     <link rel="stylesheet" href="Lab2.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Course Management</h1>
-        
-        <form id="courseForm">
-            <div class="form-group">
-                <label for="courseId">Course ID</label>
-                <input type="text" id="courseId" value="AUTO_GENERATED" readonly>
-            </div>
-            <div class="form-group">
-                <label for="courseName">Course Name <span class="required">*</span></label>
-                <input type="text" id="courseName" placeholder="Enter course name" required maxlength="255>
-                <small class="error-message" id="courseNameError"></small>
-            </div>
-            <div class="form-group">
-                <label for="courseDescription">Course Description (optional)</label>
-                <textarea id="courseDescription" placeholder="Enter course description" rows="5"></textarea>
-            </div>
-            <div class="form-group">
-                <label for="instructor">Instructor <span class="required">*</span></label>
-                <select id="instructor" required>
-                    <option value="">Select an instructor</option>
-                    <option value="instructor1">Instructor 1</option>
-                    <option value="instructor2">Instructor 2</option>
-                </select>
-                <small class="error-message" id="instructorError"></small>
-            </div>
-            <div class="form-group">
-                <label for="createdAt">Created At</label>
-                <input type="text" id="createdAt" value="2024-09-28 10:00:00" readonly>
-            </div>
-            <div class="form-group">
-                <label for="updatedAt">Last Updated At</label>
-                <input type="text" id="updatedAt" value="2024-09-28 10:00:00" readonly>
-            </div>
-            <button type="submit" id="submitButton">Create Course</button>
-            <button type="button" id="deleteButton" class="delete">Delete Course</button>
-        </form>
-
-        <div id="courseDetails" class="hidden">
-            <h2>Course Details</h2>
-            <p><strong>Course ID:</strong> <span id="detailCourseId">AUTO_GENERATED</span></p>
-            <p><strong>Course Name:</strong> <span id="detailCourseName">Course Name</span></p>
-            <p><strong>Description:</strong> <span id="detailCourseDescription">Detailed Description</span></p>
-            <p><strong>Instructor:</strong> <span id="detailInstructor">Instructor Name</span></p>
-            <p><strong>Created At:</strong> <span id="detailCreatedAt">2024-09-28 10:00:00</span></p>
-            <p><strong>Last Updated At:</strong> <span id="detailUpdatedAt">2024-09-28 10:00:00</span></p>
-            <button id="closeDetailsButton">Close</button>
+    <div class="login-container">
+        <div class="login-box">
+            <h2>Login</h2>
+            <form action="/dashboard" method="POST">
+                <label for="username">Username/Email</label>
+                <input type="text" id="username" name="username" required>
+                
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>             
+                <button type="submit"><a href="control.html">Login</a></button>
+            </form>
+            <a href="#">Forgot Password?</a>
         </div>
     </div>
-
-    <script src="Lab2.js"></script>
 </body>
 </html>
