@@ -1,0 +1,301 @@
+
+        
+          /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #0073aa;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    padding: 15px 20px;
+    border-radius: 0px;
+}
+
+.navbar .nav-left,
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.nav-left a {
+    color: #fff;
+    font-size: 14px;
+    margin-right: 15px;
+}
+
+.nav-left .separator {
+    color: #ccc;
+    margin-right: 15px;
+}
+
+/* Right section */
+.nav-right {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+.nav-right a {
+    color: #fff;
+    font-size: 14px;
+    margin-right: 15px;
+}
+
+.nav-right .separator {
+    color: #ccc;
+    margin-right: 15px;
+}
+
+/* Content Wrapper */
+.content-wrapper {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+}
+
+/* Video Section */
+.video-section {
+    background-color: #fff;
+    border-radius: 0px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 3;
+    box-sizing: border-box;
+}
+
+.video-section h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.video-section p {
+    font-size: 14px;
+    color: #666;
+    margin-top: 10px;
+}
+
+/* Function Toolbar Styles */
+.function-toolbar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+    border-radius: 0;
+}
+
+.toolbar-button {
+    background: none;
+    border: none;
+    color: #444444;
+    font-size: 16px;
+    margin-right: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.toolbar-button i {
+    margin-right: 5px;
+}
+
+.toolbar-button:hover {
+    color: #005f8c;
+}
+
+/* Course Details */
+.course-details {
+    padding: 20px;
+}
+
+.course-details h3 {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.course-stats {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 12px;
+    color: #555;
+}
+
+.course-stats span {
+    margin-right: 10px;
+}
+
+.languages {
+    font-size: 12px;
+    color: #777;
+    margin-top: 10px;
+}
+
+/* Learning Points Container */
+.learning-points-container {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 0px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+/* Learning Points */
+.learning-points-container h4 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.learning-points {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* Two-column layout */
+    gap: 10px;
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 10px;
+}
+
+.learning-points li {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+/* Tick Icon Styling */
+.learning-points li::before {
+    content: '\2713';
+    /* Checkmark Unicode */
+    color: green;
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+/* Course Content */
+.course-content {
+    flex: 1;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.course-content h2 {
+    font-size: 22px;
+    color: #333;
+    margin-right: 10px;
+    padding: 10;
+    padding-left: 16px;
+}
+
+/* Section Styles */
+.section {
+    cursor: pointer;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 0;
+    padding: 15px;
+    transition: box-shadow 0.3s ease;
+}
+
+/* Section Header Styles */
+.section h3 {
+    font-size: 16px;
+    color: #333;
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+/* Mũi tên xuống cho Section */
+.section h3::before {
+    content: '\25BC'; /* Unicode cho mũi tên xuống */
+    margin-right: 8px;
+    font-size: 12px;
+    color: #333;
+    transition: transform 0.3s ease;
+}
+
+/* Khi section đang mở, mũi tên xoay lên trên */
+.section.active h3::before {
+    transform: rotate(180deg);
+}
+
+/* Section Hover Effect */
+.section:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Content List Styles */
+.content {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 10px;
+    display: none;
+    /* Hidden by default */
+}
+
+.section.active .content {
+    display: block;
+    /* Show when active */
+}
+
+.section li {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+/* Tick Icon for Completed Items */
+.section li::before {
+    content: '\2713';
+    color: green;
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+    }
+
+    .video-section {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .course-content {
+        max-width: 100%;
+    }
+
+    .learning-points {
+        grid-template-columns: 1fr;
+    }
+}
